@@ -26,7 +26,7 @@ SECRET_KEY = '00p&9=a5mbg_26_)@%^z@eeu4=@*q=2s24ic0rk^dnxbu0@0*3'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGIN_REDIRECT_URL='dashboard'
 
 # Application definition
 
@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'cars.apps.CarsConfig',
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,8 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'django.contrib.site',
     'ckeditor',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -147,3 +148,9 @@ MESSAGE_TAGS = {
     
 }
 SITE_ID=1
+
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='kartikshing222@gmail.com'
+EMAIL_HOST_PASSWORD='Kartikey@22'
+EMAIL_USE_TLS=True

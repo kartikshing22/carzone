@@ -1,18 +1,23 @@
-{%extends 'base.html'%}
-{% load static %}
+{% extends 'base.html' %}
+
+{% block title %} | Login {% endblock %}
 {% block content %}
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
             <h1>Login To Your Account</h1>
             <ul class="breadcrumbs">
-                <li><a href="{%url 'home'%}">Home</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li class="active">Login</li>
             </ul>
         </div>
     </div>
 </div>
-<!-- Sub Banner end -->
+
 
 <!-- Contact section start -->
 <div class="contact-section">
@@ -22,7 +27,7 @@
                 <div class="form-section">
                     <div class="logo-2">
                         <a href="index.html">
-                            <img src="{% static 'img/logos/black-logo.png'%}" alt="logo">
+                            <img src="{% static 'img/logos/black-logo.png' %}" alt="logo">
                         </a>
                     </div>
                     <h3>Sign into your account</h3>
@@ -45,8 +50,8 @@
                         </div>
                         <div class="clearfix"></div>
                         <ul class="social-list">
-                            <li><a href="" class="facebook-bg"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li>
-                            <li><a href="" class="google-bg"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
+                            <li><a href="{% provider_login_url 'facebook' method='js_sdk' %}" class="facebook-bg"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li>
+                            <li><a href="{% provider_login_url 'google' %}" class="google-bg"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
                         </ul>
                     </form>
                     <p>Don't have an account? <a href="{% url 'register' %}" class="thembo"> Register here</a></p>
@@ -57,4 +62,4 @@
 </div>
 <!-- Contact section end -->
 
-{% endblock content %}
+{% endblock %}
