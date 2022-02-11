@@ -151,6 +151,6 @@ SITE_ID=1
 
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT=587
-EMAIL_HOST_USER='kartikshing222@gmail.com'
+EMAIL_HOST_USER='suprdaily.iccs203@gmail.com'
 EMAIL_HOST_PASSWORD='Kartikey@22'
 EMAIL_USE_TLS=True

@@ -52,7 +52,7 @@ def contact(request):
         send_mail(
                 email_subject,
                 message_body,
-                'kartikshing222@gmail.com',
+                'suprdaily.iccs203@gmail.com',
                 [admin_email],
                 fail_silently=False,
             )

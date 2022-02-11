@@ -36,7 +36,7 @@ def inquiry(request):
         send_mail(
                 'New Car Inquiry',
                 'You have a new inquiry for the car ' + car_title + '. Please login to your admin panel for more info.',
-                'kartikshing222@gmail.com',
+                'suprdaily.iccs203@gmail.com',
                 [admin_email],
                 fail_silently=False,
             )
